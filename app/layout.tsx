@@ -1,24 +1,17 @@
-// app/layout.tsx
-import type { Metadata } from "next";
-import "./globals.css";
-import Header from "../components/header"; // or "@/components/header" if alias is set
+import './globals.css';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
-export const metadata: Metadata = {
-  title: "SKOPE",
-  description: "Remote telescope platform",
-};
+export const metadata = { title: 'CWA Assignment', description: 'Dynamic site with code generator' };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // suppressHydrationWarning prevents errors when extensions inject attributes
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body suppressHydrationWarning>
+        <a href="#main" style={{position:'absolute',left:-9999}}>Skip to content</a>
         <Header />
-        <main>{children}</main>
+        <main id="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );

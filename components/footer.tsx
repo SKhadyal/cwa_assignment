@@ -1,9 +1,17 @@
-// components/footer.tsx
+'use client';
+import { useEffect, useState } from 'react';
+
 export default function Footer() {
-  const year = new Date().getFullYear(); // stable enough (year)
+  const year = new Date().getFullYear();
+  const [date, setDate] = useState<string>('');
+
+  useEffect(() => {
+    setDate(new Date().toLocaleDateString());
+  }, []);
+
   return (
     <footer>
-      © {year} Your Name — Student No: 123456 — Built for CSE3CWA/CSE5006
+      © {year} — Sushank Sharma — Student No. 21664359 — {date || '…'}
     </footer>
   );
 }
