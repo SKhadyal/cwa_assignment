@@ -57,7 +57,7 @@ export default function Home() {
     <section className="grid-2">
       {/* LEFT — Tabs editor */}
       <div className="left">
-        <h2>Tabs</h2>
+        <h2>Tabs</h2> 
         <div className="kv">
           <div>
             <label>Tabs Headers:</label>
