@@ -1,1 +1,9 @@
+@"
+# deps
 node_modules/
+
+# Next.js build
+.next/
+out/
+build/
+"@ | Add-Content -Encoding UTF8 .gitignore
