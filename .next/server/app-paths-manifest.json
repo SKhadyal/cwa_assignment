@@ -1,3 +1,8 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/pre-lab/page": "app/pre-lab/page.js",
+  "/about/page": "app/about/page.js",
+  "/escape-room/page": "app/escape-room/page.js",
+  "/coding-races/page": "app/coding-races/page.js",
+  "/court-room/page": "app/court-room/page.js"
 }
