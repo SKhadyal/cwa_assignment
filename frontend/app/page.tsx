@@ -1,5 +1,7 @@
 "use client";
-import { useMemo, useState } from "../components/node_modules/@types/react
+
+import { useMemo, useState } from "react";
+
 
 type Tab = { title: string; content: string };
 
