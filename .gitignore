@@ -1,1 +1,80 @@
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.lock
+
+# Node / Frontend
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.next/
+out/
+dist/
+.cache/
+coverage/
+*.env.local
+*.env.development.local
+*.env.production.local
+*.env.test.local
+
+# React / Vite / Next.js Artifacts
+*.env
+.env.*
+!.env.example
+build/
+*.tsbuildinfo
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+*.pot
+*.pyc
+*.egg-info/
+*.egg
+venv/
+ENV/
+env/
+.venv/
+.mypy_cache/
+.pytest_cache/
+celerybeat-schedule
+instance/
+*.db
+local_settings.py
+
+# IDE / Tooling
+.vscode/
+.idea/
+*.code-workspace
+*.iml
+
+# Docker / Compose
+*.pid
+*.seed
+*.pid.lock
+logs/
+docker-compose.override.yml
+*.tar
+
+# Miscellaneous
+tmp/
+temp/
+uploads/
+__snapshots__/
+*.coverage
+*.spec.ts.snap
+*.spec.js.snap
