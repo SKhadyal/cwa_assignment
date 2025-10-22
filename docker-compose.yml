@@ -1,0 +1,37 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - api
+    command: npm run dev
+
+  api:
+    build: ./api
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      - SQLITE_PATH=/data/database.sqlite
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+      - sqlite_data:/data
+    depends_on:
+      - sqlite
+    command: npm run dev
+
+  sqlite:
+    image: busybox:1.36
+    volumes:
+      - sqlite_data:/data
+    command: sh -c "mkdir -p /data && sleep infinity"
+
+volumes:
+  sqlite_data:
